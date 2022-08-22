@@ -322,6 +322,16 @@ hr {
     position: absolute;
 }
 
+.napTwo{
+    margin-top: 25px;
+}
+.napThree{
+    margin-top: 50px;
+}
+.napFour{
+    margin-top: 75px;
+}
+
 .lapdiv {
     margin-top: 7%;
     margin-left: 0%;

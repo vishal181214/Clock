@@ -1,13 +1,7 @@
 setInterval(showTime, 1000);
 
-function showTime() {
-    let time = new Date();
-    let hour = time.getHours();
-    let min  = time.getMinutes();
-    let sec  = time.getSeconds();
-    let zone = "AM";
-    let checkHour = hour;
-
+function setDynamic()
+{
     const mrng = document.getElementById("wake").value;
     const lunchafter = document.getElementById("lunch").value;
     const napTime = document.getElementById("napTime").value;
@@ -17,18 +11,9 @@ function showTime() {
     const element3 = document.getElementById("picture");
 
     
-    if(hour > 12)
-    {
-        hour -= 12;
-        zone  ="PM";
-    }
-
-    if(hour == 0)
-    {
-        hour = 12;
-        zone = "AM";
-    }
-
+    let time = new Date();
+    let hour = time.getHours();
+    let checkHour = hour;
 
     if((checkHour >= 12) && (checkHour < 16))
     {
@@ -112,6 +97,27 @@ function showTime() {
         }
     }
 
+}
+
+function showTime() {
+    let time = new Date();
+    let hour = time.getHours();
+    let min  = time.getMinutes();
+    let sec  = time.getSeconds();
+    let zone = "AM";
+    
+    if(hour > 12)
+    {
+        hour -= 12;
+        zone  ="PM";
+    }
+
+    if(hour == 0)
+    {
+        hour = 12;
+        zone = "AM";
+    }
+
     hour = hour < 10 ? "0" + hour : hour;
     min  = min < 10 ? "0" + min : min ;
     sec  = sec < 10 ? "0" + sec : sec ;
@@ -120,9 +126,33 @@ function showTime() {
     document.getElementById("minute").innerHTML = min;
     document.getElementById("second").innerHTML = sec;
     document.getElementById("zonee").innerHTML = zone;
+    
 }
 
 showTime();
+setDynamic();
+
+function setAlarm()
+{
+    const wake = document.getElementById("wakeUpdate");
+    const lunch = document.getElementById("lunchUpdate");
+    const nap = document.getElementById("napUpdate");
+    const nig = document.getElementById("nightUpdate");
+    
+
+    const upwake = document.getElementById("wake");
+    const uplunch = document.getElementById("lunch");
+    const upnap = document.getElementById("napTime");
+    const upnight = document.getElementById("nightTime");
+
+    wake.innerHTML = upwake.options[upwake.selectedIndex].text;
+    lunch.innerHTML = uplunch.options[uplunch.selectedIndex].text;
+    nap.innerHTML = upnap.options[upnap.selectedIndex].text;
+    nig.innerHTML = upnight.options[upnight.selectedIndex].text;
+
+    setDynamic();
+
+}
 
 function showMore(){
     document.getElementById("line1").innerHTML = `Party&nbspTime&nbsp!`;
@@ -133,5 +163,5 @@ function showLess(){
 }
 
 
-
+   
 

@@ -20,7 +20,7 @@
                                 <p>Set wake up time</p>
                                 <div class="select">
                                     <select name="cars" class="standard-select" id="wake">
-                                        <option value="12" >12AM - 1AM</option>
+                                        <option value="00" >12AM - 1AM</option>
                                         <option value="01" >1AM - 2AM</option>
                                         <option value="02" >2AM - 3AM</option>
                                         <option value="03" >3AM - 4AM</option>
@@ -29,7 +29,7 @@
                                         <option value="06" >6AM - 7AM</option>
                                         <option value="07" >7AM - 8AM</option>
                                         <option value="08" >8AM - 9AM</option>
-                                        <option value="01" >9AM - 10AM</option>
+                                        <option value="09" >9AM - 10AM</option>
                                         <option value="10" >10AM - 11AM</option>
                                         <option value="11" >11AM - 12PM</option>
                                         <option value="12" >12PM - 1PM</option>
@@ -53,7 +53,7 @@
                                 <p>Set lunch time</p>
                                 <div class="select stop">
                                     <select name="cars" class="standard-select" id="lunch">
-                                        <option value="12" >12AM - 1AM</option>
+                                        <option value="00" >12AM - 1AM</option>
                                         <option value="01" >1AM - 2AM</option>
                                         <option value="02" >2AM - 3AM</option>
                                         <option value="03" >3AM - 4AM</option>
@@ -62,7 +62,7 @@
                                         <option value="06" >6AM - 7AM</option>
                                         <option value="07" >7AM - 8AM</option>
                                         <option value="08" >8AM - 9AM</option>
-                                        <option value="01" >9AM - 10AM</option>
+                                        <option value="09" >9AM - 10AM</option>
                                         <option value="10" >10AM - 11AM</option>
                                         <option value="11" >11AM - 12PM</option>
                                         <option value="12" >12PM - 1PM</option>
@@ -86,7 +86,7 @@
                                 <p>Set nap time</p>
                                 <div class="select stop">
                                     <select name="cars" class="standard-select" id="napTime">
-                                        <option value="12" >12AM - 1AM</option>
+                                        <option value="00" >12AM - 1AM</option>
                                         <option value="01" >1AM - 2AM</option>
                                         <option value="02" >2AM - 3AM</option>
                                         <option value="03" >3AM - 4AM</option>
@@ -95,7 +95,7 @@
                                         <option value="06" >6AM - 7AM</option>
                                         <option value="07" >7AM - 8AM</option>
                                         <option value="08" >8AM - 9AM</option>
-                                        <option value="01" >9AM - 10AM</option>
+                                        <option value="09" >9AM - 10AM</option>
                                         <option value="10" >10AM - 11AM</option>
                                         <option value="11" >11AM - 12PM</option>
                                         <option value="12" >12PM - 1PM</option>
@@ -119,7 +119,7 @@
                                 <p>Set night time</p>
                                 <div class="select stop">
                                     <select name="cars" class="standard-select" id="nightTime">
-                                        <option value="12" >12AM - 1AM</option>
+                                        <option value="00" >12AM - 1AM</option>
                                         <option value="01" >1AM - 2AM</option>
                                         <option value="02" >2AM - 3AM</option>
                                         <option value="03" >3AM - 4AM</option>
@@ -128,7 +128,7 @@
                                         <option value="06" >6AM - 7AM</option>
                                         <option value="07" >7AM - 8AM</option>
                                         <option value="08" >8AM - 9AM</option>
-                                        <option value="01" >9AM - 10AM</option>
+                                        <option value="09" >9AM - 10AM</option>
                                         <option value="10" >10AM - 11AM</option>
                                         <option value="11" >11AM - 12PM</option>
                                         <option value="12" >12PM - 1PM</option>
@@ -152,13 +152,14 @@
                         <p id="msg">Good morning!! wake up !!</p>
                     </div>
                     <div class="alert" >
-                        <div class="alarm confetti-button" onclick="animateButton()" onmouseover="showMore()" onmouseout="showLess()" onclick="setAlarm()">
+                        <div class="alarm confetti-button" onclick="setAlarm()" onmouseover="showMore()" onmouseout="showLess()">
                             <p id="line1">Set Alarm</p>
                         </div>
                         <div class="napTimings">
-                            <p>Wake Up Time : 10AM-11AM <br>Lunch Time :
-                                12PM-1PM <br> Nap Time : 4PM-5PM <br> Night Time
-                                : 8PM-9AM</p>
+                            <p class="napOne">Wake Up Time :<span id="wakeUpdate">12AM - 1AM</span></p> 
+                            <p class="napTwo">Lunch Time : <span id="lunchUpdate">12AM - 1AM</span></p> 
+                            <p class="napThree">Nap Time : <span id="napUpdate">12AM - 1AM</span></p> 
+                            <p class="napFour">Night Time: <span id="nightUpdate">12AM - 1AM</span></p>
                         </div>
                     </div>
                 </div>
